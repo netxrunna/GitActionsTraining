@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3 # Use latest version
 
       - name: Run my own container action
         id: hello-action
-        uses: ./hello-world-docker-action
+        uses: ./hello-world-docker-action # Ensure this folder and action file exists
         with:
           who-to-greet: '@wulfland'
 
